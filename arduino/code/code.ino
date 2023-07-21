@@ -22,8 +22,8 @@ OLED_U8G2 oled;  // create oled instance
 /////////////   변수 선언 부분   ////////////////
 
 // wifi setting 
-const char* ssid = "SmartFactory";
-const char* password = "inha4885";
+const char* ssid = ".";
+const char* password = "aaaaaaaa";
 
 // 초음파 센서를 위한 변수
 int count = 0;  // 카운터용 변수

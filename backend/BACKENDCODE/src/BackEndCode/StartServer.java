@@ -5,6 +5,8 @@ import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class StartServer {
     public static void main(String[] args) throws IOException {
@@ -26,16 +28,16 @@ public class StartServer {
         public void handle(HttpExchange exchange) throws IOException {
             try {
                 String[] dataArr = ReceiveData.fetchData();
-//                String[] dataArr = tmp.arr;
+
                 // DataArr 배열의 값을 JSON 형태로 변환
                 String data = "{ " +
                         "\"ip\": \"" + dataArr[0] + "\", " +
                         "\"count\": \"" + dataArr[1] + "\", " +
                         "\"temp\": \"" + dataArr[2] + "\", " +
-                        "\"pr\": \"" + dataArr[3] + "\"" +
+                        "\"pr\": \"" + dataArr[3] + "\", " +
+                        "\"time\": \"" + getCurrentTime() + "\"" + // 현재 시간을 time 필드로 포함
                         " }";
 
-//            String data = "{ \"message\": \"Hello from Java Server!\" }";
                 // 클라이언트에게 JSON 형태의 데이터를 전송합니다
                 exchange.getResponseHeaders().set("Content-Type", "application/json");
                 exchange.getResponseHeaders().set("Access-Control-Allow-Origin", "*"); // 모든 도메인에서 요청 허용
@@ -49,5 +51,13 @@ public class StartServer {
                 throw new RuntimeException(e);
             }
         }
+
+        // 현재 시간을 문자열로 반환하는 메소드
+        private String getCurrentTime() {
+            LocalDateTime now = LocalDateTime.now();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+            return now.format(formatter);
+        }
+
     }
 }

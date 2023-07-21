@@ -20,7 +20,7 @@ public class ReceiveData {
 
     // 아두이노 웹서버에서 데이터를 가져오는 코드
     public static String[] fetchData() throws IOException, InterruptedException {
-        String urlStr = "http://192.168.15.64:80/";
+        String urlStr = "http://172.20.10.2:80/";
 
         HttpClient httpClient = HttpClient.newHttpClient();
         HttpRequest httpRequest = HttpRequest.newBuilder()

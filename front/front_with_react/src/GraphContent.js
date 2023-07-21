@@ -8,84 +8,76 @@ import {
     Tooltip,
     Legend,
     ResponsiveContainer,
+    Label,
 } from "recharts";
 
-const data = [
-    {
-        name: "Page A",
-        uv: 4000,
-        pv: 2400,
-        amt: 2400,
-    },
-    {
-        name: "Page B",
-        uv: 3000,
-        pv: 1398,
-        amt: 2210,
-    },
-    {
-        name: "Page C",
-        uv: 2000,
-        pv: 9800,
-        amt: 2290,
-    },
-    {
-        name: "Page D",
-        uv: 2780,
-        pv: 3908,
-        amt: 2000,
-    },
-    {
-        name: "Page E",
-        uv: 1890,
-        pv: 4800,
-        amt: 2181,
-    },
-    {
-        name: "Page F",
-        uv: 2390,
-        pv: 3800,
-        amt: 2500,
-    },
-    {
-        name: "Page G",
-        uv: 3490,
-        pv: 4300,
-        amt: 2100,
-    },
-];
+const GraphContent = ({ temp_q, count_q, pr_q, time_q }) => {
+    const data = [];
 
-export default class Example extends PureComponent {
-    static demoUrl = "https://codesandbox.io/s/simple-line-chart-kec3v";
+    for (let i = 0; i < 5; i++) {
+        data.push({name: time_q[i], temp: temp_q[i], count: count_q[i], pr: pr_q[i] / 1000})
+    };
 
-    render() {
-        return (
-            <ResponsiveContainer width="100%" height="100%">
-                <LineChart
-                    width={500}
-                    height={300}
-                    data={data}
-                    margin={{
-                        top: 5,
-                        right: 30,
-                        left: 20,
-                        bottom: 5,
-                    }}
+    const renderCustomTooltip = ({ active, payload, label }) => {
+        if (active && payload && payload.length) {
+            return (
+                <div className="custom-tooltip">
+                    <p className="label">{`Time: ${label}`}</p>
+                    {payload.map((entry, index) => (
+                        <p className="intro" key={`intro-${index}`}>
+                            {`${entry.dataKey}: ${entry.value}`}
+                        </p>
+                    ))}
+                </div>
+            );
+        }
+        return null;
+    };
+
+    return (
+        <ResponsiveContainer width="100%" height="950%">
+            <LineChart
+                width={20}
+                height={20}
+                data={data}
+                margin={{
+                    top: 5,
+                    right: 55,
+                    left: 5,
+                    bottom: 5,
+                }}
+            >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip content={renderCustomTooltip} />
+                <Legend />
+                <Line
+                    type="monotone"
+                    dataKey="temp"
+                    stroke="#8884d8"
+                    activeDot={{ r: 8 }}
                 >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Line
-                        type="monotone"
-                        dataKey="pv"
-                        stroke="#8884d8"
-                        activeDot={{ r: 8 }}
-                    />
-                    <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-                </LineChart>
-            </ResponsiveContainer>
-        );
-    }
-}
+                    {/* Label 컴포넌트를 사용하여 그래프 위에 작은 라벨을 추가 */}
+                    <Label content={renderCustomLabel} position="top" />
+                </Line>
+                <Line type="monotone" dataKey="count" stroke="#82ca9d">
+                    <Label content={renderCustomLabel} position="top" />
+                </Line>
+                <Line type="monotone" dataKey="pr" stroke="#4287f5">
+                    <Label content={renderCustomLabel} position="top" />
+                </Line>
+            </LineChart>
+        </ResponsiveContainer>
+    );
+};
+
+// Label 컴포넌트를 커스터마이즈하여 원하는 형식으로 값을 표시
+const renderCustomLabel = ({ viewBox, value }) => {
+    const { x, y } = viewBox;
+    return (
+        <text x={x} y={y} dy={-10} textAnchor="middle" fill="#666">{value}</text>
+    );
+};
+
+export default GraphContent;
