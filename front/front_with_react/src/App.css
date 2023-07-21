@@ -1,38 +1,98 @@
+@font-face {
+  font-family: 'HakgyoansimWoojuR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.titleWrapper {
+  padding: 10px 10px 10px 70px;
+  vertical-align: middle;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Wrapper {
+
+  margin: 5px;
+}
+
+.body {
+  background-color: skyblue;
+  height: ;
+  font-style: italic;
+  color: white;
+  font-family: 'HakgyoansimWoojuR', sans-serif;
+
+}
+
+.nav {
+  display: flex;
+  justify-content: right;
+}
+
+.navContents {
+  display: flex;
+  justify-content: right;
+  list-style-type: none;
+  font-size: 5px;
+  padding: 5px;
+}
+
+.navContent {
+  padding: 5px 5px 0px;
+}
+
+.contentWrapper {
+  vertical-align: middle;
+}
+
+.ContentBox {
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+}
+
+.ContentWrapper {
+  border: 1px solid white;
+  width: 2500px;
+  height: 300px;
+  display: flex;
+}
+
+.RightContentWrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+}
+
+.LeftContentWrapper {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.mainContent {
+  border: 1px solid black;
+  width: auto;
+  height: 1000px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.graphContent {
+  border: 1px solid black;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+
 }
