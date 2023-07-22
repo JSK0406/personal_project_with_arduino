@@ -85,6 +85,27 @@ void handleRootEvent() {
 //     digitalWrite(yellow_led, y);
 // }
 
+//////////// front의 reset요청 이벤트 함수 //////////////
+
+void handlePostRequest() {
+  if (server.method() == HTTP_POST) {
+    red_status = 1;
+    server.send(200, "text/plain", "red_status updated to 1");
+  } else {
+    server.send(405, "text/plain", "Method Not Allowed");
+  }
+}
+
+/////////////// cors 오류를 처리하는 함수 ////////////////
+
+void handleOptions() {
+  server.sendHeader("Access-Control-Allow-Origin", "*");
+  server.sendHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
+  server.sendHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  server.send(200);
+}
+
+
 ///////////// wifi를 연결하는 함수 ////////////////
 void connectWifi() {
   // wifi connecting
@@ -104,6 +125,8 @@ void connectWifi() {
   Serial.println("// 입니다.");
   
   server.on("/", handleRootEvent);
+  server.on("/setRedStatus", handlePostRequest);
+  server.onNotFound(handleOptions); // for CORS preflight request
   server.begin();
 }
 
@@ -358,6 +381,5 @@ void loop() {
   }
 
   server.handleClient();
-  delay(2);
 
 }
