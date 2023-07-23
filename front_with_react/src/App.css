@@ -1,0 +1,192 @@
+@font-face {
+  font-family: 'HakgyoansimWoojuR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.App {
+  text-align: center;
+}
+
+.titleWrapper {
+  padding: 25px 10px 10px 90px;
+  vertical-align: middle;
+  width: 100%;
+  font-size: 30px;
+}
+
+.header {
+  border-bottom: 2px solid white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Wrapper {
+  margin: 5px;
+}
+
+.body {
+  background-color: skyblue;
+  height: 100%;
+  width: 100%;
+  font-style: italic;
+  color: black;
+  font-family: 'HakgyoansimWoojuR', sans-serif;
+  font-size: 18px;
+  opacity: 0.8;
+  filter: brightness(100%);
+  transition: filter 1s ease-out;
+}
+
+.nav {
+  display: flex;
+  justify-content: right;
+}
+
+.navContents {
+  display: flex;
+  justify-content: right;
+  list-style-type: none;
+  font-size: 15px;
+  padding: 15px;
+
+}
+
+.navContent {
+  padding: 5px 5px 0px;
+}
+
+.navContent > Link {
+  color: black;
+}
+
+/* .contentWrapper {
+  vertical-align: middle;
+} */
+
+.ContentBox {
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+}
+
+.ContentWrapper {
+  border: 2px solid white;
+  width: 20%;
+  height: 350px;
+  display: flex;
+  border-radius: 10px;
+}
+
+.RightContentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 10px;
+}
+
+.mainContent {
+  width: auto;
+  height: 380px;
+}
+
+.graphContent {
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.article {
+  flex-direction: column;
+  /* height: 70%; */
+}
+
+.timerContent {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.MiddleContentWrapper {
+  border: 2px solid white;
+  width: 55%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.GraphContent {
+  height: 100px;
+}
+
+.footer {
+  border-top: 2px solid white;
+  height: 40px;
+  padding-top: 10px;
+  padding-right: 30px;
+  text-align: right;
+}
+
+.title {
+  text-decoration-line: none;
+  font-style: normal;
+  font-weight: bold;
+  color: black;
+}
+
+.refreshTime {
+  font-size: 15px;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.navContent:hover {
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+
+.timerController:hover {
+  transition: 0.5s;
+  transform: scale(1.5);
+}
+
+.weatherWrapper {
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  font-size: 20px;
+  height: 200px;
+}
+
+.provinceBox {
+  text-align: center;
+}
+
+.leftUpperBox {
+  margin-top: 33px;
+  padding-left: 20px;
+}
+
+.btnReset {
+  background: none;
+  border-color: white;
+  border-radius: 10px;
+  text-shadow: none;
+}
+
+.btnReset:hover {
+  transition: 0.1s;
+  transform: scale(1.2);
+}
+
+.LeftContentWrapper {
+  align-items: center;
+}
