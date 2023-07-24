@@ -37,8 +37,11 @@
   데이터를 그래프로 시각화
   백엔드로부터의 데이터 수신 및 표시
   <div align=center>
+      
   ![기본동작gif](https://github.com/JSK0406/personal_project_with_arduino_java_react/assets/122510664/f7e3b485-d663-4873-ad67-614dd41059b1)
+
   </div>
+  
 
 + 갱신시간을 조절해 서버로부터의 데이터 수신 주기를 조절
   <div align=center>
