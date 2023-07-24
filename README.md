@@ -20,6 +20,7 @@
 ## 프로젝트 내용
 
 <div align=left>
+    
 ### 아두이노 및 센서 설정
 
 + 온도, 조도, 초음파 센서 연결
@@ -35,17 +36,22 @@
 + 리액트 프레임워크를 이용한 웹페이지 구성
   데이터를 그래프로 시각화
   백엔드로부터의 데이터 수신 및 표시
+  <div align=center>
   ![기본동작gif](https://github.com/JSK0406/personal_project_with_arduino_java_react/assets/122510664/f7e3b485-d663-4873-ad67-614dd41059b1)
-
+  </div>
 
 + 갱신시간을 조절해 서버로부터의 데이터 수신 주기를 조절
+  <div align=center>
   ![갱신시간 조절gif](https://github.com/JSK0406/personal_project_with_arduino_java_react/assets/122510664/708aacd6-85d3-45bc-b590-85c8a305865d)
-
+</div>
 
 + 조도에 따른 웹페이지 배경 밝기 자동 조절 기능 구현
+   <div align=center>
   ![밝기 조절gif](https://github.com/JSK0406/personal_project_with_arduino_java_react/assets/122510664/232028fc-3ae1-4e57-a747-cae65606f5d9)
-
+    </div>
 
 + 초기화 버튼 클릭 시 아두이노에 신호를 보내 아두이노의 리셋 기능 작동
+  <div align=center>
   ![초기화 기능gif](https://github.com/JSK0406/personal_project_with_arduino_java_react/assets/122510664/40b8817d-b29c-4a6f-86cb-2f3a1cfbf23e)
+  </div>
 </div>
