@@ -19,6 +19,7 @@
 
 ## 프로젝트 내용
 
+<div align=left>
 ### 아두이노 및 센서 설정
 
 + 온도, 조도, 초음파 센서 연결
@@ -47,3 +48,4 @@
 
 + 초기화 버튼 클릭 시 아두이노에 신호를 보내 아두이노의 리셋 기능 작동
   ![초기화 기능gif](https://github.com/JSK0406/personal_project_with_arduino_java_react/assets/122510664/40b8817d-b29c-4a6f-86cb-2f3a1cfbf23e)
+</div>
