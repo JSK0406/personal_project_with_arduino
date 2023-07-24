@@ -3,10 +3,10 @@
 이 프로젝트의 주요 목표는 아두이노 키트와 센서를 활용하여 실시간 데이터를 수집하고, 이를 웹페이지에 동적으로 표현하는 것입니다.
 
 <div align=center>
-    <img src="https://img.shields.io/badge/java-#00979D?style=for-the-badge&logo=java&logoColor=white"><br/>
+    <img src="https://simpleicons.org/icons/arduino.svg"><br/>
     <div>ESP32(ET Board)</div></br>
     <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"><br/>
-    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+    <img src="simpleicons.org/icons/react.svg">
 <div>
     
 ## 주요 목표
