@@ -4,8 +4,8 @@
 
 <div align=center>
     <div>ArduinoBoard : ESP32(ET Board) </div>
-    <img src="https://img.shields.io/badge/arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white"><br/>
-    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"><br/>
+    <img src="https://img.shields.io/badge/arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white">
+    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
     <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white"><br/>
 <div>
     
@@ -45,16 +45,22 @@
 
 + 갱신시간을 조절해 서버로부터의 데이터 수신 주기를 조절
   <div align=center>
+      
   ![갱신시간 조절gif](https://github.com/JSK0406/personal_project_with_arduino_java_react/assets/122510664/708aacd6-85d3-45bc-b590-85c8a305865d)
-</div>
+
+  </div>
 
 + 조도에 따른 웹페이지 배경 밝기 자동 조절 기능 구현
    <div align=center>
+       
   ![밝기 조절gif](https://github.com/JSK0406/personal_project_with_arduino_java_react/assets/122510664/232028fc-3ae1-4e57-a747-cae65606f5d9)
-    </div>
+
+   </div>
 
 + 초기화 버튼 클릭 시 아두이노에 신호를 보내 아두이노의 리셋 기능 작동
   <div align=center>
+      
   ![초기화 기능gif](https://github.com/JSK0406/personal_project_with_arduino_java_react/assets/122510664/40b8817d-b29c-4a6f-86cb-2f3a1cfbf23e)
+
   </div>
 </div>
